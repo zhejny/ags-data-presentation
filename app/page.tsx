@@ -40,11 +40,11 @@ export default function Home() {
         </p>
       </section>
       <section>
-        <a href="/assets/ags_score.pdf" target="_blank">
+        <a href="assets/ags_score.pdf" target="_blank">
           View Score
         </a>
         <audio
-          src="/assets/ags_audio.mp3"
+          src="assets/ags_audio.mp3"
           controls
           className="pb-[0.5rem]"
         ></audio>
@@ -61,7 +61,7 @@ export default function Home() {
             <div className="plot-text">{data.text}</div>
             <div className="plot-image" key={index}>
               <Image
-                src={"/" + data.imgSource}
+                src={data.imgSource}
                 alt={data.name}
                 width={data.width}
                 height={data.height}
