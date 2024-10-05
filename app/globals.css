@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main > * {
+  margin: 0 auto;
+  flex: 1;
+}
+
+header > * {
+  font-weight: bold;
+  text-align: center;
+}
+
+header {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section > * {
+  padding-bottom: 1rem;
+}
+
+a {
+  font-size: large;
+  font-weight: bold;
+  transition: scale 0.5s ease-in-out;
+}
+
+a:hover {
+  scale: 115%
+}
+
+div.plot-image {
+  width: 640px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.plot-text {
+  padding-bottom: 1rem
+}
+
+p.text {
+  max-width: 67%;
+}
+
+@media (max-width: 650px) {
+  p.text {
+    max-width: 95%;
+  }
+
+  div.plot-image {
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 650px) {
+  .header-nav {
+    gap: 2.5rem;
+  }
+
+  .about {
+    max-width: 99%;
+    margin: 1rem;
+  }
+
+  .about-subsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-subsection > * {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .about-featuredaudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-featuredaudio > * {
+    text-align: center;
+  }
+
+  .about-featuredaudio-player {
+    max-width: 100%;
+  }
+
+  .vgm-list {
+    max-width: 99%;
+    margin: 1rem;
+  }
+
+  .vgm-demo {
+    opacity: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vgm-demo:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .vgm-demo-text > * {
+    text-align: center;
+  }
+
+  .map-info {
+    right: 1rem;
+  }
+} */
