@@ -1,24 +1,23 @@
-import { PlotData } from "@/public/data";
 import Image from "next/image";
-import React from "react";
+import { PlotData } from "@/public/data";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <header>
         <h1>A GREEN STREAM (2018)</h1>
         <h2>Compositional Approach and Algorithm Visualization</h2>
       </header>
       <section>
-        <p className="text">
+        <p>
           A Green Stream (2018) is an algorithmic composition for flute, piano,
           and a live electronics sampling system built using SuperCollider. It
           is my first attempt to create music in which all the material is
           chosen by probabilistic functions governing individual musical
           parameters. This page visualizes the more important parametric
           evolutions that structure A Green Stream.
-        </p>
-        <p className="text">
+          <br />
+          <br />
           My goal composing this piece was to engineer textures free of
           conventional musical rhythm. I wanted to design a system to produce
           smooth streams of notes in which coloristic features would emerge
@@ -37,8 +36,8 @@ export default function Home() {
           instrumentalists especially to interpret the material confidently,
           allowing the passing transformations of density, register, and
           articulation to flow freely.
-        </p>
-        <p className="text">
+          <br />
+          <br />
           The electronics part adds another texture to the ‘stream’ and creates
           a subtle surrealism when sounds sampled during earlier moments in the
           piece returned to accompany the musicians later. There are no effects
@@ -46,8 +45,8 @@ export default function Home() {
           short snippets and plays it back in random orders at certain speeds
           and densities. These sounds are also panned throughout four
           loudspeakers surrounding the audience.
-        </p>
-        <p className="text">
+          <br />
+          <br />
           The following score and performance recording are from a 96-measure
           version of the piece.
         </p>
@@ -56,12 +55,8 @@ export default function Home() {
         <a href="assets/ags_score.pdf" target="_blank">
           View Score
         </a>
-        <audio
-          src="assets/ags_audio.mp3"
-          controls
-          className="pb-[0.5rem]"
-        ></audio>
-        <p className="text pb-[2rem]">
+        <audio src="assets/ags_audio.mp3" controls></audio>
+        <p>
           <i>
             Performed 13 April 2018 by Margaret Lancaster (flute), Rory Cowal
             (piano), and Zachary Hejny (electronics)
@@ -70,9 +65,9 @@ export default function Home() {
       </section>
       <section>
         {PlotData.map((data, index) => (
-          <div key={index}>
-            <p className="text">{data.text}</p>
-            <div className="plot-image" key={index}>
+          <div className="plot" key={index}>
+            <div className="plot-text">{data.text}</div>
+            <div className="plot-image">
               <Image
                 src={data.imgSource}
                 alt={data.name}
@@ -83,6 +78,6 @@ export default function Home() {
           </div>
         ))}
       </section>
-    </>
+    </main>
   );
 }

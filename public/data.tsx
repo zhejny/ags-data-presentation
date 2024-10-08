@@ -5,8 +5,8 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <div>
-        <p className='text'>
+      <>
+        <p>
           The most important parameter to consider in creating a flowing texture
           is the interpolation of individual instruments’ densities. I wanted to
           give the physical impression of a stream in which the water moves
@@ -20,10 +20,8 @@ export const PlotData = [
           polyrhythmic relationships between the parts. I believe I found a
           sweet spot of control, and that the borders between each five-second
           time division are mostly imperceptible.
-        </p>
-        <br/>
-        <p className='text'>
-          I determined the piece would have a structural climax at a point
+          <br />
+          <br />I determined the piece would have a structural climax at a point
           two-thirds through its entire duration (around measure 61 in the score
           for this version), and I characterized this climax by engineering
           interpolated parameters to reach extremities in their range at this
@@ -32,7 +30,7 @@ export const PlotData = [
           piano reaches its maximum density when the flute reaches it lowest
           density (as shown in the curve).
         </p>
-      </div>
+      </>
     ),
   },
   {
@@ -41,7 +39,7 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <p className='text'>
+      <p>
         The next important factor creating the intended physical impression of a
         flowing stream was how each instrument traversed its various registers.
         The standard concert piano spans seven full octaves (and change) while
@@ -59,7 +57,7 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <p className='text'>
+      <p>
         After mapping out these interpolations of density and register, I
         created similar systems to determine certain individual characteristics
         that distinguish the instruments from one another. One of the biggest
@@ -82,7 +80,7 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <p className='text'>
+      <p>
         Each time the algorithm generates a chord, the following curves were
         used to determine the spacing of those chords. The bottom curve (drawn
         as a solid turquoise line) is the same as the piano register curve from
@@ -105,7 +103,7 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <p className='text'>
+      <p>
         One feature that distinguishes the flute from the piano is its ability
         to produce different sound effects by means of articulation. I chose
         four common articulations to color each note in A Green Stream: long
@@ -130,7 +128,7 @@ export const PlotData = [
     width: 640,
     height: 480,
     text: (
-      <p className='text'>
+      <p>
         The horizontal arrangement of pitches was determined by an algorithm
         that combines two factors. The first is a general curve determining the
         probability that a certain pitch class could be chosen at any moment
