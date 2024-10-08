@@ -11,32 +11,45 @@ export default function Home() {
       </header>
       <section>
         <p className="text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
-          molestiae maiores? Exercitationem nesciunt esse repellendus vel!
-          Aspernatur sunt, earum natus nam fugiat sed odit! Id minima a
-          consequatur quae dicta mollitia esse modi quidem ratione animi officia
-          quibusdam adipisci in error commodi illum, rem accusamus. Quo dolor
-          quaerat nesciunt vitae?
+          A Green Stream (2018) is an algorithmic composition for flute, piano,
+          and a live electronics sampling system built using SuperCollider. It
+          is my first attempt to create music in which all the material is
+          chosen by probabilistic functions governing individual musical
+          parameters. This page visualizes the more important parametric
+          evolutions that structure A Green Stream.
         </p>
         <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
-          porro at dolor excepturi. Adipisci suscipit a, ipsum quia doloremque
-          dolorem totam repudiandae? Illo dolore totam blanditiis repudiandae
-          porro aliquam, ea nisi rem assumenda maiores cumque sequi esse quo
-          voluptatum dicta natus eos? Odio excepturi facere soluta architecto
-          dolores aperiam quaerat quas distinctio error quia accusamus est
-          numquam modi mollitia asperiores dolorum, dicta temporibus voluptas at
-          doloribus minus, recusandae esse delectus! Animi similique delectus
-          ratione harum, modi molestias ipsum, nam earum eum atque illo
-          praesentium obcaecati quo fuga placeat? Provident dicta aliquid
-          praesentium beatae nam perferendis reiciendis laboriosam quia
-          possimus.
+          My goal composing this piece was to engineer textures free of
+          conventional musical rhythm. I wanted to design a system to produce
+          smooth streams of notes in which coloristic features would emerge
+          “naturally” through confluences embedded in the contrapuntal
+          relationships between interpolated musical parameters. The score (see
+          link below) does not use a time signature, any stems, or beaming to
+          indicate rhythm. Instead, each measure is prescribed to last roughly
+          five seconds, and whatever noteheads drawn are meant to be evenly
+          spaced within those five seconds. When preparing to premiere the
+          piece, the performers and I decided to use coordinated metronomes set
+          to 12 beats-per-minute to dictate the passing of each measure. These
+          were placed on our music stands with the volume off, leaving just a
+          visual blip to indicate the downbeat of each measure. This freed the
+          performers from the responsibility of coordinating the passing of each
+          measure (or worse forcing us to use a conductor), and allowed the
+          instrumentalists especially to interpret the material confidently,
+          allowing the passing transformations of density, register, and
+          articulation to flow freely.
         </p>
         <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-          facere consequatur dolore, ab ullam dignissimos ad et beatae provident
-          vero architecto. Culpa, laborum earum quam explicabo corrupti enim
-          cum. Quas?
+          The electronics part adds another texture to the ‘stream’ and creates
+          a subtle surrealism when sounds sampled during earlier moments in the
+          piece returned to accompany the musicians later. There are no effects
+          added to the sampled sounds. The patch cuts the recorded material into
+          short snippets and plays it back in random orders at certain speeds
+          and densities. These sounds are also panned throughout four
+          loudspeakers surrounding the audience.
+        </p>
+        <p className="text">
+          The following score and performance recording are from a 96-measure
+          version of the piece.
         </p>
       </section>
       <section>
@@ -48,7 +61,7 @@ export default function Home() {
           controls
           className="pb-[0.5rem]"
         ></audio>
-        <p className="pb-[2rem]">
+        <p className="text pb-[2rem]">
           <i>
             Performed 13 April 2018 by Margaret Lancaster (flute), Rory Cowal
             (piano), and Zachary Hejny (electronics)
@@ -58,7 +71,7 @@ export default function Home() {
       <section>
         {PlotData.map((data, index) => (
           <div key={index}>
-            <div className="plot-text">{data.text}</div>
+            <p className="text">{data.text}</p>
             <div className="plot-image" key={index}>
               <Image
                 src={data.imgSource}
