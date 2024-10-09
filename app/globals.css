@@ -36,7 +36,24 @@ section > * {
   padding-bottom: 1rem;
 }
 
-a {
+.poem-line {
+  font-style: italic;
+}
+
+.poem-credit {
+  text-align: right
+}
+
+.poem-link {
+  color: green;
+  transition: color 0.5s ease-in-out;
+}
+
+.poem-link:hover {
+  color: purple;
+}
+
+a.score {
   font-size: large;
   font-weight: bold;
   transition: scale 0.5s ease-in-out;

@@ -7,28 +7,12 @@ export const PlotData = [
     text: (
       <>
         <p>
-          The most important parameter to consider in creating a flowing texture
-          is the interpolation of individual instruments’ densities. I wanted to
-          give the physical impression of a stream in which the water moves
-          faster and slow, and rises and falls in gradual degrees over time. I
-          did not want to burden the performers by giving them in-ear click
-          tracks or another to tool to ensure smooth interpolations of playing
-          speed. Instead, I approximated this control by directing the
-          performers to space whatever notes appeared in a five-second measure
-          as evenly as possible. I wasn’t concerned how accurately they spaced
-          these notes, because I wasn’t concerned with creating specific
-          polyrhythmic relationships between the parts. I believe I found a
-          sweet spot of control, and that the borders between each five-second
-          time division are mostly imperceptible.
-          <br />
-          <br />I determined the piece would have a structural climax at a point
-          two-thirds through its entire duration (around measure 61 in the score
-          for this version), and I characterized this climax by engineering
-          interpolated parameters to reach extremities in their range at this
-          moment. The density parameter characterizes this climax most by
-          creating an extreme relationship between the two instruments. The
-          piano reaches its maximum density when the flute reaches it lowest
-          density (as shown in the curve).
+          The plot below represents the density (notes per measure) of each
+          instrument over time. Each curve interpolates between 0 and 24 notes
+          per five-second measure. The piece has a structural climax two-thirds
+          of the way through its duration (around measure 61 in the score). This
+          climax is characterized by an extreme disparity between the density of
+          the flute (0) and that of the piano (24).
         </p>
       </>
     ),
@@ -40,14 +24,14 @@ export const PlotData = [
     height: 480,
     text: (
       <p>
-        The next important factor creating the intended physical impression of a
-        flowing stream was how each instrument traversed its various registers.
-        The standard concert piano spans seven full octaves (and change) while
-        the orchestral flute spans a relatively limited three octaves (depending
-        on the player’s skill). To help distinguish the structural climax of the
-        piece described above, I interpolated the registers to create the
-        highest space between the instruments, just as the densities reach their
-        extreme also.
+        The next plot visualizes how the flute and piano traverse their
+        respective octave registers over time. The standard concert piano spans
+        seven full octaves (and change) while the orchestral flute spans a
+        relatively limited three octaves (depending on the player’s skill). The
+        aggregate octave range between the instruments reaches an extreme at the
+        piece’s structural climax. The piano plays in its lowest octave while
+        the flute plays at its highest. This reinforces and colors the climax
+        created by the extreme differences in density described above.
       </p>
     ),
   },
@@ -58,19 +42,14 @@ export const PlotData = [
     height: 480,
     text: (
       <p>
-        After mapping out these interpolations of density and register, I
-        created similar systems to determine certain individual characteristics
-        that distinguish the instruments from one another. One of the biggest
-        features of the piano that sets it apart from the flute is its ability
-        to perform multiple pitches at once. I drew the following curve to
-        determine the probability that a given note would also generate a chord.
-        This simple curve decreases the probability a chord will occur until the
-        structural climax, in which the probability becomes zero. This choice
-        was practical as well as aesthetic and helped to relieve the player from
-        having to punch out chords when their density had reached its fastest
-        state. The pitches of these chords were determined by the same algorithm
-        that determined the horizontal flow of pitches (explained below in the
-        description of the final curve).
+        This curve represents the probability that a note event in the piano
+        generates a chord, or a cluster of notes. It decreases the probability a
+        chord will occur until the structural climax when it becomes 0%. This
+        relieves the pianist from needing to punch out chords while playing at
+        their fastest speed. It also reinforces the unique texture of the
+        climax. The individual pitches of piano chords were determined by the
+        same algorithm that determined the horizontal sequence of pitches
+        (described in the final plot below).
       </p>
     ),
   },
@@ -81,19 +60,18 @@ export const PlotData = [
     height: 480,
     text: (
       <p>
-        Each time the algorithm generates a chord, the following curves were
-        used to determine the spacing of those chords. The bottom curve (drawn
-        as a solid turquoise line) is the same as the piano register curve from
-        above and represents the base register on which chord notes are stacked.
-        The top curve (dashed yellow line) then represents the potential spacing
-        of the chord above the base register. At the beginning of the piece, the
-        two lines are identical, meaning that any chords generated are written
-        within the same octave. At the structural climax (two-thirds of the
-        duration), the chord range reaches its widest spacing just as the piano
-        reaches its fastest density. This effect can be seen in the score
-        (around measure 61) where the left hand of the piano performs fast notes
-        in its lowest octaves, and whatever chords are generated appear in the
-        highest octave, spaced the entire range of the piano.
+        Each time the algorithm generated a piano chord, the following curves
+        were used to determine the octave spacing of that chord. The turquoise
+        curve is identical to the earlier curve governing piano register and
+        represents the base register on which chord notes were stacked. The
+        dashed yellow curve represents the range of the chord above this base
+        register. At the beginning of the piece, the two curves are identical,
+        meaning that any chords generated are written within the same octave as
+        the base note. Following the previous structural trend, the chord range
+        reaches its widest possible spacing at the piece’s climax. The effect
+        can be seen in measure 61 of the score where the left hand performs fast
+        notes in the lowest octave, and the right hand punches out sparse chords
+        at the other end of the instrument.
       </p>
     ),
   },
@@ -104,21 +82,16 @@ export const PlotData = [
     height: 480,
     text: (
       <p>
-        One feature that distinguishes the flute from the piano is its ability
-        to produce different sound effects by means of articulation. I chose
-        four common articulations to color each note in A Green Stream: long
-        pitched notes, breath sounds (that obscure the pitch), pitched staccato
-        notes, and key clicks produced by hammering on the keys with the fingers
-        without blowing into the instrument. The four curves shown below
-        determine the probability that each articulation will be chosen at a
-        given moment. While performing the electronics patch, knowledge of when
-        certain articulations would pop out of the texture allowed me to target
-        those areas for sampled material. The most visible example is the
-        probability to generate key clicks (drawn as a green dotted-dashed
-        line), which peaks at a particular moment one-third of way through the
-        piece. I specifically sampled the flute at that moment during the
-        performance so that I could use the key click sound at moments during
-        the rest of the piece.
+        The feature that most distinguishes the flute from the piano is its
+        ability to produce diverse timbres by means of articulation. I chose
+        four common articulations to color the various interpolations of flute
+        density and register in <i>A Green Stream</i>: sustained pitches, breath
+        sounds, pitched staccato, and key clicks (produced by hammering on the
+        flute keys without blowing into the instrument). The four curves below
+        represent the probability for each articulation to be chosen for a given
+        note event. Notice that the probability for key clicks reaches 100% at a
+        point that coincides with the flute’s maximum density, creating a
+        secondary structural climax in the piece.
       </p>
     ),
   },
@@ -129,18 +102,18 @@ export const PlotData = [
     height: 480,
     text: (
       <p>
-        The horizontal arrangement of pitches was determined by an algorithm
-        that combines two factors. The first is a general curve determining the
-        probability that a certain pitch class could be chosen at any moment
-        (shown in the graph below). The other factor was the proximity to the
-        previous time a given pitch class was chosen. Each time a certain pitch
-        class is chosen the probability that will be chosen next becomes zero.
-        Each time the pitch class is not chosen its probability to be chosen
-        increases by a certain factor. This factor overwrites the probabilities
-        shown in the curve to ensure that there are never repeated notes
-        generated in the piece. This was important because I felt repeated notes
-        might interrupt the feeling of flow or at least create a different
-        sensation.
+        Sequences of pitches were determined by an algorithm that factors
+        together two probabilities: a general probability for each pitch class
+        over time (visualized in the plot below) and a probability based on the
+        proximity of identical pitch classes in a sequence. Each time a certain
+        pitch class is chosen for a note event, its proximity probability drops
+        to 0%. If a pitch class is not chosen during an event, its probability
+        increases by a certain factor. This ensures that pitch classes are never
+        repeated in subsequent note events and, more generally, that identical
+        pitch classes are spread evenly throughout sequences of notes. This
+        avoids giving any impressions of tonal hierarchy and creates a constant
+        inflection of hue that reinforces the feeling of flow created by the
+        interpolation of other parameters.
       </p>
     ),
   },

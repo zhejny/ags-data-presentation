@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PlotData } from "@/public/data";
+import Poem from "@/components/poem";
 
 export default function Home() {
   return (
@@ -10,49 +11,51 @@ export default function Home() {
       </header>
       <section>
         <p>
-          A Green Stream (2018) is an algorithmic composition for flute, piano,
-          and a live electronics sampling system built using SuperCollider. It
-          is my first attempt to create music in which all the material is
-          chosen by probabilistic functions governing individual musical
-          parameters. This page visualizes the more important parametric
-          evolutions that structure A Green Stream.
-          <br />
-          <br />
-          My goal composing this piece was to engineer textures free of
-          conventional musical rhythm. I wanted to design a system to produce
-          smooth streams of notes in which coloristic features would emerge
-          “naturally” through confluences embedded in the contrapuntal
-          relationships between interpolated musical parameters. The score (see
-          link below) does not use a time signature, any stems, or beaming to
-          indicate rhythm. Instead, each measure is prescribed to last roughly
-          five seconds, and whatever noteheads drawn are meant to be evenly
-          spaced within those five seconds. When preparing to premiere the
-          piece, the performers and I decided to use coordinated metronomes set
-          to 12 beats-per-minute to dictate the passing of each measure. These
-          were placed on our music stands with the volume off, leaving just a
-          visual blip to indicate the downbeat of each measure. This freed the
-          performers from the responsibility of coordinating the passing of each
-          measure (or worse forcing us to use a conductor), and allowed the
-          instrumentalists especially to interpret the material confidently,
-          allowing the passing transformations of density, register, and
-          articulation to flow freely.
-          <br />
-          <br />
-          The electronics part adds another texture to the ‘stream’ and creates
-          a subtle surrealism when sounds sampled during earlier moments in the
-          piece returned to accompany the musicians later. There are no effects
-          added to the sampled sounds. The patch cuts the recorded material into
-          short snippets and plays it back in random orders at certain speeds
-          and densities. These sounds are also panned throughout four
-          loudspeakers surrounding the audience.
-          <br />
-          <br />
-          The following score and performance recording are from a 96-measure
-          version of the piece.
+          <i>A Green Stream</i> (2018) is an algorithmic composition for flute,
+          piano, and live electronics. It was my first attempt to create fully
+          generative music. All its content was determined using probability
+          functions that govern the evolution of various musical parameters over
+          time. These include note density, instrument register, articulation,
+          and pitch class. This page visualizes several such functions and
+          describes how the interpolation of each parameter contributes to the
+          central vision of the piece.
+        </p>
+        <Poem />
+        <p>
+          My goal was to engineer a sonic texture that behaves like flowing
+          water. The sound of water has no rhythm, or at least, not conventional
+          musical rhythm. It slows and flurries, rises and folds; splashes and
+          sprays emerge out of the confluence of things like temperature,
+          humidity, volume, mineral content, viscosity, etc., but a stream’s
+          basic flow is never interrupted.
+        </p>
+        <p>
+          Music often progresses through time at a certain tempo or speed, but
+          in trying to imitate water, I found it more appropriate to base my
+          music on speed’s inverse – density. The notation (open link below) is
+          not organized with a classical time signature or meter. Individual
+          notes do not have stems or beams indicating how long they should last.
+          Instead, I divided the score into five-second measures and instructed
+          performers to space their notes as evenly as possible within each
+          measure. This means that the “speed” at any moment is determined by
+          the number of notes in a given measure, the inverse of the local
+          density. It is the counterpoint between interpolations of density in
+          the flute, piano, and electronics parts that primarily define the
+          structure of <i>A Green Stream</i>.
+        </p>
+        <p>
+          The live electronics part uses a custom sample-playback system I
+          designed and implemented in SuperCollider. It records flute and piano
+          sounds at certain early moments during the performance and splices
+          them into small grains, which it then streams back through four
+          loudspeakers surrounding the audience. The electronics add another
+          layer to the flowing movement of this music. It envelops the listener
+          in the musical world and creates a subtle surrealism as sounds from
+          the recent past return to accompany the present moment. Circulation.
         </p>
       </section>
       <section>
-        <a href="assets/ags_score.pdf" target="_blank">
+        <a className="score" href="assets/ags_score.pdf" target="_blank">
           View Score
         </a>
         <audio src="assets/ags_audio.mp3" controls></audio>
