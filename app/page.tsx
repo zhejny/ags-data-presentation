@@ -20,6 +20,7 @@ export default function Home() {
           describes how the interpolation of each parameter contributes to the
           central vision of the piece.
         </p>
+        <br />
         <Poem />
         <p>
           My goal was to engineer a sonic texture that behaves like flowing
