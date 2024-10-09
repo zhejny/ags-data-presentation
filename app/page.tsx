@@ -57,7 +57,7 @@ export default function Home() {
       </section>
       <section>
         <a className="score" href="assets/ags_score.pdf" target="_blank">
-          View Score
+          <u>View Score</u>
         </a>
         <audio src="assets/ags_audio.mp3" controls></audio>
         <p>
