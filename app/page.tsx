@@ -11,7 +11,7 @@ export default function Home() {
       </header>
       <section>
         <p>
-          <i>A Green Stream</i> (2018) is an algorithmic composition for flute,
+          <i>A Green Stream</i> is an algorithmic composition for flute,
           piano, and live electronics. It was my first attempt to create fully
           generative music. All its content was determined using probability
           functions that govern the evolution of various musical parameters over
