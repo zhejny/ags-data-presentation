@@ -13,7 +13,7 @@ export default function Home() {
         <p>
           <i>A Green Stream</i> is an algorithmic composition for flute,
           piano, and live electronics. It was my first attempt to create fully
-          generative music. All its content was determined using probability
+          generative music. Its content was determined using probability
           functions that govern the evolution of various musical parameters over
           time. These include note density, instrument register, articulation,
           and pitch class. This page visualizes several such functions and
