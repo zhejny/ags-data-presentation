@@ -20,6 +20,19 @@ export default function Home() {
           describes how the interpolation of each parameter contributes to the
           central vision of the piece.
         </p>
+        <br/>
+        <section>
+          <a className="score" href="assets/ags_score.pdf" target="_blank">
+            <u>View Score</u>
+          </a>
+          <audio src="assets/ags_audio.mp3" controls></audio>
+          <p>
+            <i>
+              Performed 13 April 2018 by Margaret Lancaster (flute), Rory Cowal
+              (piano), and Zachary Hejny (electronics)
+            </i>
+          </p>
+        </section>
         <br />
         <Poem />
         <p>
@@ -53,18 +66,6 @@ export default function Home() {
           layer to the flowing movement of this music. It envelops the listener
           in the musical world and creates a subtle surrealism as sounds from
           the recent past return to accompany the present moment. Circulation.
-        </p>
-      </section>
-      <section>
-        <a className="score" href="assets/ags_score.pdf" target="_blank">
-          <u>View Score</u>
-        </a>
-        <audio src="assets/ags_audio.mp3" controls></audio>
-        <p>
-          <i>
-            Performed 13 April 2018 by Margaret Lancaster (flute), Rory Cowal
-            (piano), and Zachary Hejny (electronics)
-          </i>
         </p>
       </section>
       <section>
