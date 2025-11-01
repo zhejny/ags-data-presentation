@@ -46,7 +46,7 @@ export default function Home() {
         <p>
           Music often progresses through time at a certain tempo or speed, but
           in trying to imitate water, I found it more appropriate to base my
-          music on speed’s inverse – density. The notation (open link below) is
+          music on speed’s inverse – density. The notation (open link above) is
           not organized with a classical time signature or meter. Individual
           notes do not have stems or beams indicating how long they should last.
           Instead, I divided the score into five-second measures and instructed
